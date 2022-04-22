@@ -1,0 +1,59 @@
+.pianoBoard {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap:1px;
+}
+
+.pianoBoard .key {
+    cursor: pointer;
+    position:relative;
+}
+
+.pianoBoard .key.active:before {
+    content: attr(data-note);
+    display: flex;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    bottom: 10px;
+    box-sizing: border-box;
+    background: rgb(203 12 12);
+    color: white;
+    border-radius: 50%;
+    right: calc(50% - 9px);
+    font-family: monospace;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2px;
+}
+
+.pianoBoard .whiteKey {
+    width:40px;
+    height:145px;
+    border:2px solid #bfbfbf;
+    border-radius:7px;
+    position:relative;
+    z-index:8;
+    background: #fff; 
+}
+.pianoBoard .whiteKey.nogap {
+    margin-right:1px;
+}
+
+.pianoBoard .blackKey {
+    width: 26px;
+    height: 90px;
+    border: 1px solid #444;
+    border-radius: 7px;
+    background: #383838;
+    top: -3px;
+    z-index: 9;
+    margin-left: -14px;
+    margin-right: -14px;
+    margin-top: -3px;
+}
+
